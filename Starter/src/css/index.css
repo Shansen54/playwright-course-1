@@ -12,6 +12,11 @@ h1 {
     text-align: center;
 }
 
+header > h1 {
+    color: #4CAF50;
+}
+
+
 header {
     background: #333;
     color: #fff;
