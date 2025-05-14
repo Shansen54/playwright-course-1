@@ -44,7 +44,7 @@ test.describe('Save data', () => {
 
     })
 
-    test.describe.only('Errors while saving data - only this will be run from this block', ()=>{
+    test.describe('Errors while saving data', ()=>{
         test('Network error', ()=>{
 
         })
