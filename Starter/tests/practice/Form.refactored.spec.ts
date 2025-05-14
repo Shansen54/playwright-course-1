@@ -40,7 +40,7 @@ test('Form is submitted with required fields - form is cleared after submit', as
     expect(formSubmitted).toBeTruthy()
 
     // check if form is cleared:
-    await checkIfItemsNotEmpty(page)
+    await checkIfItemsEmpty(page);
 
 })
 

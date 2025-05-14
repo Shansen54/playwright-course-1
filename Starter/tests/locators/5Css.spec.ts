@@ -19,6 +19,6 @@ test('Css selectors', async ({ page }) => {
     // select by css class:
     const acceptButton = page.locator('.accept')
     await acceptButton.click()
-    expect(cookieBanner).not.toBeVisible()
+    await expect(cookieBanner).not.toBeVisible()
 
 })
