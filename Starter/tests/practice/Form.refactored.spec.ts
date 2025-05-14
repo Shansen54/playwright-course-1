@@ -8,14 +8,14 @@ const someHighlights = 'Dance session'
 test('Form is submitted with required fields', async ({ page }) => {
     let formSubmitted = false
 
-    page.on('dialog', dialog => {
-        dialog.accept()
+    page.on('dialog', async dialog => {
+        await dialog.accept()
         formSubmitted = true
     })
 
     await page.goto('FeedBackForm.html')
 
-    completeFields(page)
+    await completeFields(page)
 
     await clickButton(page, 'Submit')
 
@@ -26,14 +26,14 @@ test('Form is submitted with required fields', async ({ page }) => {
 test('Form is submitted with required fields - form is cleared after submit', async ({ page }) => {
     let formSubmitted = false
 
-    page.on('dialog', dialog => {
-        dialog.accept()
+    page.on('dialog',async dialog => {
+        await dialog.accept()
         formSubmitted = true
     })
 
     await page.goto('FeedBackForm.html')
 
-    completeFields(page)
+    await completeFields(page)
 
     await clickButton(page, 'Submit')
 
@@ -54,7 +54,7 @@ test('Form is NOT submitted without minimal fields', async ({ page }) => {
 
     await page.goto('FeedBackForm.html')
 
-    completeFields(page)
+    await completeFields(page)
 
     // clear required field:
     await page.getByLabel('name').clear()
@@ -72,7 +72,7 @@ test('Form is NOT submitted if user selects NO on dialog', async ({ page }) => {
 
     await page.goto('FeedBackForm.html')
 
-    completeFields(page)
+    await completeFields(page)
 
     await clickButton(page, 'Submit')
 
@@ -82,11 +82,13 @@ test('Form is NOT submitted if user selects NO on dialog', async ({ page }) => {
 
 // clear progress tests:
 test('Form is completed - clear button clears inputs', async ({ page }) => {
-    page.on('dialog', dialog => {
-        dialog.accept()
+    page.on('dialog',async dialog => {
+        await dialog.accept()
     })
 
-    completeFields(page)
+    await page.goto('FeedBackForm.html')
+
+    await completeFields(page)
 
     const checkBox = page.getByRole('checkbox', { name: 'I agree' })
     await checkBox.check()
@@ -105,7 +107,7 @@ test('Form is completed - clear button clears memory', async ({ page }) => {
 
     await page.goto('FeedBackForm.html')
 
-    completeFields(page)
+    await completeFields(page)
 
     await clickButton(page, 'Save')
 
@@ -125,7 +127,7 @@ test('Form is completed - clear button does not clear inputs if dialog rejected'
 
     await page.goto('FeedBackForm.html')
 
-    completeFields(page)
+    await completeFields(page)
 
     await clickButton(page, 'Clear')
 
@@ -141,7 +143,7 @@ test('Form is completed - save data button saves data', async ({ page }) => {
 
     await page.goto('FeedBackForm.html')
 
-    completeFields(page)
+    await completeFields(page)
 
     await clickButton(page, 'Save')
 
