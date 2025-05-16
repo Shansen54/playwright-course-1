@@ -11,6 +11,26 @@ export default defineConfig({
   use: {
     baseURL: 'http://localhost:5000/',
     headless: false
-  }
+  },
+  // projects: [
+  //   {
+  //     name: 'chromium',
+  //     use: { ...devices['Desktop Chrome'], },
+  //     dependencies:[
+  //       'auth-setup'
+  //     ]
+  //   },
+  //   {
+  //     name: 'firefox',
+  //     use: { ...devices['Desktop Firefox'] },
+  //     dependencies:[
+  //       'auth-setup'
+  //     ]
+  //   },
+  //   {
+  //     name: 'auth-setup',
+  //     testMatch: 'tests/setup/Auth.setup.ts',
+  //   }
+  // ]
 
 });
