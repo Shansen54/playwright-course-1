@@ -1,4 +1,4 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
@@ -10,7 +10,7 @@ export default defineConfig({
   },
   use: {
     baseURL: 'http://localhost:5000/',
-    headless: false
+    headless: process.env.CI ? true : false,
   },
   // projects: [
   //   {
