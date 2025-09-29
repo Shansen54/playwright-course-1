@@ -5,7 +5,7 @@ test.use({
         cookies: [], // not working
         origins: [
             {
-                origin: '',
+                origin: 'http://localhost:5000/', // https://github.com/microsoft/playwright/issues/36753
                 localStorage: [{
                     name: 'name',
                     value: 'Alex'
