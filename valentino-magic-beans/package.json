@@ -9,10 +9,10 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.54.2",
+    "@playwright/test": "^1.56.0",
     "@types/node": "^24.7.0"
   },
   "dependencies": {
-    "mailslurp-client": "^15.24.2"
+    "mailslurp-client": "^16.0.0"
   }
 }
