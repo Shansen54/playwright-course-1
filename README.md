@@ -1,6 +1,6 @@
 # Playwright Course Project
 
-A comprehensive Playwright testing course with multiple modules covering different aspects of end-to-end testing, from basic concepts to advanced techniques.
+A comprehensive Playwright testing course with multiple modules covering different aspects of end-to-end testing, from basic concepts to advanced techniques. 
 
 ## Project Structure
 
