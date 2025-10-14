@@ -22,8 +22,8 @@ test('Item is added to the shopping cart', async ({ page }) => {
     // assert subtotal:
     const subTotalWrapper = page.getByText('Subtotal').locator('..').locator('.font-semibold')
     const subtotal = await subTotalWrapper.textContent();
-    const expectedSubtotal = Number(subtotal?.substring(1))
-    const actualSubtotal = Number(firstProductPrice?.substring(1))
+    const actualSubtotal = Number(subtotal?.substring(1))
+    const expectedSubtotal = Number(firstProductPrice?.substring(1))
     expect(actualSubtotal).toEqual(expectedSubtotal)
 
 })
